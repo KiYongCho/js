@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event실습 3</title>
+    <script defer src="34ex.event3.js"></script>
+</head>
+<body>
+    <form name="writeForm" action="#" method="get">
+        아이디 : <input name="uid" type="text"><br>
+        비밀번호 : <input name="upass" type="password"><br>
+        성별 : 남 <input name="gender" type="radio" value="male">&nbsp;
+              여 <input name="gender" type="radio" value="female"><br>
+        취미 : 게임 <input name="game" type="checkbox">&nbsp;
+              유튜브 <input name="youtube" type="checkbox">&nbsp;
+              독서 <input name="reading" type="checkbox">&nbsp;
+              잠 <input name="sleeping" type="checkbox"><br>
+        거주지 : 
+        <select name="reg">
+            <option value="seoul">서울</option>
+            <option value="noseoul">안서울</option>
+        </select>
+        <br>
+        자기소개 : <textarea name="intro" rows="10" cols="40"></textarea><br>
+        <input type="button" id="submit" value="전송">&nbsp;
+        <input type="reset"value="초기화">
+    </form>
+</body>
+</html>

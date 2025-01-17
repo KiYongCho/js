@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event실습 4</title>
+    <script defer src="34ex.event4.js"></script>
+    <style>
+        table { width: 600px; text-align: center; }
+        thead { background-color: #ddd;}
+        tfoot { background-color: #eee}
+        table, th, td { border: 1px solid #333; border-collapse: collapse;  }
+        input[type='text'] { width: 80px; }
+    </style>
+</head>
+<body>
+    <p>
+        성명 <input type="text">&nbsp;
+        국어 <input type="text">&nbsp;
+        영어 <input type="text">&nbsp;
+        수학 <input type="text">&nbsp;
+        <button>등록</button>
+    </p>    
+    <table>
+        <thead>
+            <tr>
+                <th>성명</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+                <th>총점</th>
+                <th>[삭제]</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+            <tr>
+                <td>과목총점</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td colspan="2"></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
