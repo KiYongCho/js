@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usersrequest</title>
+    <script defer src="35ex.usersrequest.js"></script>
+    <style>
+        table { width: 1200px; }
+        caption { font-size: 32px; font-weight: bold; margin-bottom: 20px;}
+        thead { background-color: #ccc; }
+        table, th, td { border: 1px solid #333; border-collapse: collapse; }
+        th, td { height: 30px; text-align: center; }
+        p { text-align: center; }
+    </style>
+</head>
+<body>
+    <p>
+        <button id="getAllUsers">사용자 데이터 전체 조회</button>&nbsp;
+        <input id="userId" type="text" value="">&nbsp;
+        <button id="getUser">조회</button>&nbsp;
+        <button id="asc">오름차순 정렬</button>&nbsp;
+        <button id="desc">내림차순 정렬</button>&nbsp;
+    </p>
+    <table>
+        <caption>::: USERS :::</caption>
+        <colgroup>
+            <col width="5%">
+            <col width="8%">
+            <col width="8%">
+            <col width="14%">
+            <col width="24%">
+            <col width="8%">
+            <col width="8%">
+            <col width="25%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>username</th>
+                <th>email</th>
+                <th>address</th>
+                <th>phone</th>
+                <th>website</th>
+                <th>company</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>
