@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post</title>
+</head>
+<body>
+    <pre></pre>
+    <script>
+        const xhr = new XMLHttpRequest();
+        // post : Request Method:POST, URL:/persons
+        xhr.open('POST', '/persons');
+        // 서버에게 보내는 데이터가 json임을 알려줌
+        xhr.setRequestHeader('content-type', 'application/json');
+        // 객체를 JSON문자열로 변환해서 서버에 전송
+        xhr.send(JSON.stringify({id:"3", name:"lee sun shin", age: 40}));
+        xhr.onload = () => {
+            if (xhr.status==200) {
+                document.querySelector('pre').textContent
+                    = xhr.response;
+            } else {
+                console.error('에러발생!', xhr.status, 
+                    xhr.statusText);
+            }
+        };
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

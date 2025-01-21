@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get</title>
+</head>
+<body>
+    <pre></pre>
+    <script>
+        const xhr = new XMLHttpRequest();
+        // get : Request Method:GET, URL:/persons/1
+        xhr.open('GET', '/persons/1');
+        // GET일때는 보내는 데이터가 없으므로 send()
+        xhr.send();
+        xhr.onload = () => {
+            if (xhr.status==200) {
+                document.querySelector('pre').textContent
+                    = xhr.response;
+            } else {
+                console.error('에러발생!', xhr.status, 
+                    xhr.statusText);
+            }
+        };
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete</title>
+</head>
+<body>
+    <pre></pre>
+    <script>
+        const xhr = new XMLHttpRequest();
+        // delete : Request Method:DELETE, URL:/persons/3
+        xhr.open('DELETE', '/persons/3');
+        xhr.send();
+        xhr.onload = () => {
+            if (xhr.status==200) {
+                document.querySelector('pre').textContent
+                    = xhr.response;
+            } else {
+                console.error('에러발생!', xhr.status, 
+                    xhr.statusText);
+            }
+        };
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
