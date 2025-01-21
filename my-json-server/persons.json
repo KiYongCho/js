@@ -2,23 +2,13 @@
   "persons": [
     {
       "id": "1",
-      "name": "hong gil dong",
-      "age": 20
+      "name": "홍길동",
+      "age": "20"
     },
     {
       "id": "2",
-      "name": "kang kam chan",
-      "age": 30
-    },
-    {
-      "id": "3",
-      "name": "3",
-      "age": "3"
-    },
-    {
-      "id": "4",
-      "name": "최경락",
-      "age": "1"
+      "name": "강감찬",
+      "age": "30"
     }
   ]
 }

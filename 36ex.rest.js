@@ -115,7 +115,7 @@ const printList = (responseArr, selValue, sort) => {
                 <button onclick="deletePerson('${obj.id}');">삭제</button>
             </td>
         `;
-        tbody.appendChild(tr);    
+        tbody.appendChild(tr);
     }    
 };
 
