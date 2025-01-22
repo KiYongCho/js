@@ -31,7 +31,8 @@ listPerson.addEventListener('click', e => {
     .then(res => {
         responseArr = res.data;
         printList(responseArr);
-    });
+    })
+    .catch(err => console.error(err));
 });
 
 getPerson.addEventListener('click', e => {
@@ -56,13 +57,15 @@ getPerson.addEventListener('click', e => {
             </td>
         `;
         tbody.appendChild(tr); 
-    });
+    })
+    .catch(err => console.error(err));
 });
 
 registPerson.addEventListener('click', e => {
     axios.post('http://localhost:7777/persons', 
         {"id": pid.value, "name": pname.value, "age": page.value})
-    .then(() => printList(responseArr));
+    .then(() => printList(responseArr))
+    .catch(err => console.error(err));
 });
 
 asc.addEventListener('click', () => {
@@ -116,14 +119,16 @@ const modifyPerson = pid => {
     const page = document.querySelector('#age'+pid).value;
     axios.put(`http://localhost:7777/persons/${pid}`,
         {"id":pid, "name":pname, "age":page})
-    .then(() => printList(responseArr));
+    .then(() => printList(responseArr))
+    .catch(err => console.error(err));
 }
 
 const deletePerson = pid => {
     const confirm = window.confirm('삭제하시겠습니까?');
     if (!confirm) return;
     axios.delete(`http://localhost:7777/persons/${pid}`)
-    .then(() => printList(responseArr));
+    .then(() => printList(responseArr))
+    .catch(err => console.error(err));
 }
 
 listPerson.click();
