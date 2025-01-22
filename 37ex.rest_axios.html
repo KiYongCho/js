@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="37ex.rest_axios.js"></script>
+    <style>
+        body { font-size: 1.2em; text-align: center; }
+        input, button, select { font-size: 20px; }
+        p { 
+            width: 860px; height: 60px; border: 1px solid #ddd;
+            margin: 0 auto 20px auto; border-radius: 10px; 
+            text-align: center; line-height: 60px;
+        }
+        .pid { width: 80px; }
+        .pname { width: 280px; }
+        .page { width: 60px; }
+        table { width:860px; margin: 0 auto; }
+        caption { font-size: 1.4em; font-weight: bold; margin-bottom: 10px;}
+        thead { background-color: #eee; }
+        table, th, td { 
+            border: 1px solid #333; border-collapse: collapse; 
+        }
+        th, td { height: 30px; line-height: 30px;}
+    </style>
+</head>
+<body>
+    <p>
+        <button id="listPerson">데이터가져오기</button>&nbsp;&nbsp;&nbsp;
+        <input id="sid" type="text" class="pid" placeholder="id">&nbsp;
+        <button id="getPerson">조회</button>&nbsp;&nbsp;&nbsp;
+        <select id="sel">
+            <option value="">----</option>
+            <option value="id">id</option>
+            <option value="name">name</option>
+            <option value="age">age</option>
+        </select>&nbsp;
+        <button id="asc">ASC</button>&nbsp;
+        <button id="desc">DESC</button>
+    </p>
+    <p>
+        id <input id="pid" class="pid" type="text">&nbsp;
+        name <input id="pname" class="pname" type="text">&nbsp;
+        age <input id="page" class="page" type="text">&nbsp;
+        <button id="registPerson">등록</button>
+    </p>
+    <table>
+        <caption>:: PERSONS ::</caption>
+        <colgroup>
+            <col width="16%">
+            <col width="45%">
+            <col width="14%">
+            <col width="25%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>age</th>
+                <th>수정/삭제</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

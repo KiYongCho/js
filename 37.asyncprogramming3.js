@@ -133,7 +133,14 @@
 
 // // 프라미스 정적메소드
 
-// // 전체가 다 resolve 되면 수행을 종료
+
+// 병렬 비동기 호출
+// 만약 Promise.resolve(1) 10초
+// Promise.resolve(2) 6초
+// Promise.resolve(3) 3초 걸린다면
+// Promise.all로 병렬 호출하면 최고 오래걸리는 10초보다
+// 조금 더 걸려서 병렬 비동기 호출을 모두 수행할 수 있음
+// 전체가 다 resolve 되면 수행을 종료
 // Promise.all(
 //     [
 //         1, // => Promise.resolve(1)
