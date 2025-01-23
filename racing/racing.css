@@ -1,16 +1,17 @@
 * { maring: 0; padding: 0; }
 h1 {
     font-size: 30px;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
 }
 header {
+    height: 100px;
     background-color: orange;
 }
 footer {
     position: relative;
-    height: 60px;
-    line-height: 60px;
+    height: 80px;
+    line-height: 80px;
     background-color: skyblue;
 }
 footer > p {
@@ -27,22 +28,22 @@ button, select {
 }
 #wrapper {
     width: 1280px;
-    height: 800px;
     background-color: #fff;
     border: 5px sold #eee;
     margin: 0 auto;
 }
 #ground {
-    height: 545px;
+    border: 1px dotted orange;
+    height: 510px;
 }
 #board {
-    height: 100px;
+    height: 120px;
     background-color: black;
 }
 #board > p {
     text-align: center;
-    height: 100px;
-    line-height: 40px;
+    height: 120px;
+    line-height: 50px;
     color: #fff;
     font-size: 24px;
     font-weight: bold;

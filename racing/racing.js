@@ -11,6 +11,7 @@ let interval2 = null;
 let interval3 = null;
 let interval4 = null;
 
+let started = false;
 let speedRate = 1.0;
 
 const rate = [];
@@ -59,6 +60,7 @@ const comStart = () => {
         horse2, speedRate);
     interval3 = setInterval(run, Math.ceil(Math.random()*50) + 100, 
         horse3, speedRate);
+    started = true;
 };
 
 level.addEventListener('change', e => {
@@ -72,20 +74,22 @@ level.addEventListener('change', e => {
 });
 
 document.addEventListener('keyup', e => {
-    const horse4Left = parseInt(
-        horse4.style.left.substring(0, horse4.style.left.length-2));
-    if (horse4Left < 1080) {
-        if (e.code === 'Space') {
-            horse4.style.left = (horse4Left + 18)+ 'px';
+    if (started) {
+        const horse4Left = parseInt(
+            horse4.style.left.substring(0, horse4.style.left.length-2));
+        if (horse4Left < 1080) {
+            if (e.code === 'Space') {
+                horse4.style.left = (horse4Left + 18)+ 'px';
+            }
+            if (e.code === 'KeyB') {
+                horse4.style.left = (horse4Left + 36)+ 'px';
+            }
+        } else {
+            if (rate.length!=4) {
+                if (rate.indexOf(4)==-1) rate.push(4);
+            }
+            printResult();
         }
-        if (e.code === 'KeyB') {
-            horse4.style.left = (horse4Left + 36)+ 'px';
-        }
-    } else {
-        if (rate.length!=4) {
-            if (rate.indexOf(4)==-1) rate.push(4);
-        }
-        printResult();
     }
 });
 
@@ -93,7 +97,7 @@ const printResult = () => {
     if (rate.length==4) {
         let printStr = "";
         for (let i=0; i<rate.length; i++) {
-            printStr += (i+1) + "등 : " + rate[i] + "레인&nbsp;&nbsp;&nbsp;"
+            printStr += (i+1) + "등 : " + rate[i] + "레인&nbsp;&nbsp;&nbsp;&nbsp;"
         }
         result.innerHTML = printStr;
     }
