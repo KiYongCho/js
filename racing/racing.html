@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>racing game</title>
+    <script defer src="racing.js"></script>
+    <link rel="stylesheet" href="racing.css">
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <h1>::: RACING GAME :::</h1>
+    </header>
+    <div id="ground">
+        <p id="horse1"><img src="horse.gif"></p>
+        <p id="horse2"><img src="horse.gif"></p>
+        <p id="horse3"><img src="horse.gif"></p>
+        <p id="horse4"><img src="horse.gif"></p>
+    </div>
+    <div id="board">
+        <p>
+            <span id="result">CHOOSE LEVEL & PRESS START BUTTON!</span><br>
+            <button id="reset" onclick="location.reload();">RESET</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select id="level">
+                <option value="easy">EASY</option>
+                <option value="medium">MEDIUM</option>
+                <option value="hard">HARD</option>
+            </select>&nbsp;&nbsp;
+            <button id="start">START</button>
+        </p>
+    </div>
+    <footer>
+        <p>Copyright It'me 2025</p>
+    </footer>
+</div>
+</body>
+</html>
