@@ -19,7 +19,20 @@ $('#start').click(e => {
     $('#start').prop("disabled", true);
     $('#level').prop("disabled", true);
     $('#result').text("STARTED! PRESS SPACE KEY OR B KEY!");
-    comStart();
+    $('#countdown').css("display", "block");
+    setTimeout(()=>{
+        $('#countdown img').attr("src", "3.png");    
+    },1000);
+    setTimeout(()=>{
+        $('#countdown img').attr("src", "2.png");    
+    },1000);
+    setTimeout(()=>{
+        $('#countdown img').attr("src", "1.png");    
+    },2000);
+    setTimeout(()=> {
+        $('#countdown').css("display", "none");
+        comStart();
+    }, 3000);
 });
 
 const run = function(horse, speedRate=1.0) {
