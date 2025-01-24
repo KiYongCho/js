@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $("#fruits").click(e => {
+                console.log("ul 클릭됨!");
+            });
+            $(".cl").click(e => {
+                console.log(e.target.textContent);
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul id="fruits">
+        <li class="cl">사과</li>
+        <li class="cl">딸기</li>
+        <li class="cl">바나나</li>
+    </ul>
+    <ul id="persons">
+        <li class="cl">홍길동</li>
+        <li class="cl">강감찬</li>
+        <li class="cl">이순신</li>
+    </ul>
+</body>
+</html>

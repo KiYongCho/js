@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>effect</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+           $("button").click(e => {
+            switch (e.target.textContent) {
+                case "toggle":
+                    $("#div1").toggle(); break;
+                case "slideToggle":
+                    $("#div1").slideToggle(); break;
+                case "fadeToggle":
+                    $("#div1").fadeToggle(3000, e => {
+                        console.log("fadeToggle 후속 콜백"); 
+                    });
+            }
+           });
+        });
+    </script>
+    <style>div { width:100px; height:100px; background-color: yellow; }</style>
+</head>
+<body>
+    <p>
+        <button>toggle</button>&nbsp;
+        <button>slideToggle</button>&nbsp;
+        <button>fadeToggle</button>
+    </p>    
+    <div id="div1"></div>
+</body>
+</html>

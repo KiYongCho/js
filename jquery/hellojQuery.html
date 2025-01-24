@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hellojQuery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        // jQeury
+        $(function() {
+            $('#btn').click(() => {
+                alert('jQuery의 세계에 오신 것을 환영합니다!');
+            });
+        });
+
+        // Javascript
+        // window.onload = function() {
+        //     const btn = document.querySelector('#btn');
+        //     btn.addEventListener('click', e => {
+        //         alert('jQuery의 세계에 오신 것을 환영합니다!');
+        //     });
+        // };
+    </script>
+</head>
+<body>
+    <p>
+        <button id="btn">클릭</button>
+    </p>
+</body>
+</html>

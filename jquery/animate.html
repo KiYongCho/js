@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $("#btn1").click(e => {
+                $("#div1").animate({
+                    left: "+=200px",
+                    opacity: "0.5",
+                    width: "+=200px",
+                    height: "+=200px"
+                }, () => {
+                    alert('에니메이션 완료!');
+                });
+            });
+            $("#btn2").click(e => {
+                $("#div2").slideUp(1000).slideDown(500).fadeOut(1000)
+                .fadeIn(500);
+            });
+        });
+    </script>
+    <style>
+        #div1 { width:100px; height:100px; 
+              position:absolute; background-color: yellow; }
+        #div2 { width:100px; height:100px; 
+                margin-top: 120px; background-color: blue; }
+    </style>
+</head>
+<body>
+    <p>
+        <button id="btn1">에니메이션1</button>&nbsp;
+        <button id="btn2">에니메이션2</button>
+    </p>
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>

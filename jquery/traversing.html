@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traversing</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            console.log($("ul").parent()[0]);
+            console.log($("li:first").parents());
+            console.log($("li:first").parentsUntil("div"));
+            console.log($("ul").children());
+            console.log($("ul").find("li:last"));
+            console.log($("li:eq(1)").siblings());
+            console.log($("li:eq(1)").next().text());
+            console.log($("li:eq(1)").prev().text());
+            console.log($("li:first").nextAll());
+            console.log($("ul li").first());
+            console.log($("ul li").last());
+            console.log($("li").filter(".li"));
+            console.log($("li").not(".li"));
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li class="li">1</li>
+            <li>2</li>
+            <li class="li">3</li>
+        </ul>
+    </div>
+</body>
+</html>
