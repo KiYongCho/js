@@ -8,16 +8,6 @@ header {
     height: 100px;
     background-color: orange;
 }
-footer {
-    position: relative;
-    height: 80px;
-    line-height: 80px;
-    background-color: skyblue;
-}
-footer > p {
-    text-align: center;
-    font-size: 20px;
-}
 img {
     display: inline-block;
     width: 200px;
