@@ -21,9 +21,6 @@ $('#start').click(e => {
     $('#result').text("STARTED! PRESS SPACE KEY OR B KEY!");
     $('#countdown').css("display", "block");
     setTimeout(()=>{
-        $('#countdown img').attr("src", "3.png");    
-    },1000);
-    setTimeout(()=>{
         $('#countdown img').attr("src", "2.png");    
     },1000);
     setTimeout(()=>{
