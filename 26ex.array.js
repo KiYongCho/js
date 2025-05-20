@@ -64,19 +64,6 @@ persons.forEach(ele => {
     );
 });
 
-// 11. 각 사람의 주소에 contury:'대한민국'을 추가하고
-//    이름, 나이, 주소를 출력    ex) 홍길동,20세,대한민국 서울 역삼
-persons.forEach(ele => {
-    ele.address.country = '대한민국';
-    console.log(
-        ele.name + ',' +
-        ele.age + '세,' +
-        ele.address.country + ' ' +
-        ele.address.si.substring(0, ele.address.si.length-1)+' ' +
-        ele.address.dong.substring(0, ele.address.dong.length-1)
-    );
-});
-
 // sort
 const people = [
     {name:'홍길동', age: 20},
