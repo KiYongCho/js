@@ -14,6 +14,17 @@ let result = (function(a, b) {
 }(3, 5));
 console.log(result);
 
+// 재귀 함수 (recursive function)
+// 함수가 함수 내에서 자기자신을 다시 호출하는 함수
+function factorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+console.log(factorial(5));  // 120 출력
+console.log(factorial(3));  // 6 출력
+
 // 중첩함수 (nested function)
 // outer function scope : o, inner
 // inner function scope : i
