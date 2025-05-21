@@ -32,3 +32,22 @@ console.log(str3.replace(/[^a-zA-Z0-9]/g, ''));
 // 결과 : ['12.50', '100.99']
 const text2 = "The prices are 12.50, 100.99, and 3.5 dollars.";
 console.log(text2.match(/\d+\.\d{2}/g));
+
+// 8. 숫자 뒤에 '원'이 오는 경우만 추출
+// 결과 : ['1000', '3000']
+const t1 = '1000원, 2000달러, 3000원, 400엔';
+const r1 = /\d+(?=원)/g;
+console.log(t1.match(r1));
+
+// 9. 한글 이름들만 추출하여 배열 출력 (한글이름은 2글자~4글자로 제한)
+// 결과 : ['김철수', '이은', '최고길동']
+const t2 = ['김철수', '이은', '박', '123홍길동', '최고길동'];
+const r2 = /^[가-힣]{2,4}$/;
+console.log(t2.filter(ele => r2.test(ele)));
+
+// 10. 영문자와 숫자를 모두 포함하고 6글자 이상인 비밀번호들만 추출하여 배열 출력
+// 결과 : ['abc123', 'abcDEF789']
+const password = ['abc123', 'password', 'abcDEF789', '123456', 'abc!'];
+const r3 = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+console.log(password.filter(ele => r3.test(ele)));
+
